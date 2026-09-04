@@ -1,0 +1,89 @@
+<header class="d-flex flex-column justify-content-center align-items-baseline">
+    <div class="container bg-transparent mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 mt-3">
+                <div class="intro text-light">
+                    <span class="small opacity-50">I am</span>
+                    <h1 class="display-1 fw-bold">
+                        <span class="fa-1x">Josh Doe</span>
+                    </h1>
+                </div>
+                <div class="intro-detail mt-3">
+                    <p class="text-light opacity-75 small">
+                        Passionate about building clean, scalable web applications 
+                        that solve real-world problems. Specializing in Angular, 
+                        TypeScript, and modern web technologies.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-3">
+                <div class="interactive-box text-center rounded-4 p-4">
+                    <div class="terminal-window text-start">
+                    <!-- Terminal Header -->
+                    <div class="terminal-header d-flex align-items-center gap-2 mb-3">
+                        <span class="terminal-dot bg-danger"></span>
+                        <span class="terminal-dot bg-warning"></span>
+                        <span class="terminal-dot bg-success"></span>
+                        <span class="terminal-title text-muted ms-2 small">bash — 80×24</span>
+                    </div>
+                    
+                    <!-- Terminal Body -->
+                    <div class="terminal-body">
+                        <p class="terminal-line mb-1">
+                        <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span class="text-white">git push</span>
+                        </p>
+                        <p class="terminal-line mb-1 text-danger">
+                        ! [rejected] main -> main (fetch first)
+                        </p>
+                        <p class="terminal-line mb-1 text-warning">
+                        error: failed to push some refs to 'github.com:user/repo.git'
+                        </p>
+                        <p class="terminal-line mb-1">
+                        <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span class="text-white">git pull --rebase</span>
+                        </p>
+                        <p class="terminal-line mb-1 text-danger">
+                        CONFLICT (content): Merge conflict in app.html
+                        </p>
+                        <p class="terminal-line mb-1">
+                        <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span class="text-white blinking-cursor">git push --force</span>
+                        </p>
+                        <p class="terminal-line shadow mt-2 text-light">
+                        Success! (just kidding, it's still broken)
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="position-fixed top-0 w-100">
+    <app-navigation></app-navigation>    
+</div>
+
+
+<div class="about-section-snippet py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="about-title">
+                    <span class="opacity-50 small">Who Am I</span>
+                    <h1 class="text-light opacity-75">About</h1>
+                </div>
+                <div class="mt-4 w-50 mx-auto">
+                    <p>
+                        I'm a developer who turns coffee into code. With a passion for
+                        building clean, scalable web applications that actually work.
+                        <br>
+                        When I'm not coding, you'll find me debugging, breaking things,
+                        or pretending to understand merge conflicts.
+                    </p>
+                </div>
+                <a routerLink="/about" class="btn-custom mt-2">
+                    Read More <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

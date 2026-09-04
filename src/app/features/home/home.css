@@ -1,0 +1,93 @@
+/* Hero Section with Background */
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+             url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 130svh;
+}
+
+/* Terminal Window */
+.terminal-window {
+  background: #0a0a0a;
+  border-radius: 10px;
+  padding: 16px;
+  font-family: 'Courier New', monospace;
+  border: 1px solid #2a2a2a;
+  min-height: 200px;
+}
+
+.terminal-header {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-title {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.terminal-body {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.terminal-line {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 0.5s steps(30) forwards;
+}
+
+/* Blinking cursor */
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Hover effect on the box */
+.interactive-box:hover .terminal-line {
+  animation: typing 0.5s steps(30) forwards;
+}
+
+.interactive-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.interactive-box:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(13, 110, 253, 0.1);
+  border-color: #0d6efd;
+  box-shadow: 0 20px 60px rgba(13, 110, 253, 0.2);
+}
+
+/* About Teaser Section */
+section {
+    position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.fa-user-astronaut {
+  transition: all 0.5s ease;
+}
+
+.fa-user-astronaut:hover {
+  transform: translateY(-10px) scale(1.1);
+}
