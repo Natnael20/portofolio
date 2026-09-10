@@ -1,4 +1,5 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { CommonModule } from '@angular/common';  // ← CORRECT PACKAGE
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
@@ -13,7 +14,7 @@ import { ProjectCard } from './shared/project-card/project-card';
 
 @NgModule({
   declarations: [App, Navigation, Footer, Home, About, Projects, Contact, ProjectCard],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, CommonModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })

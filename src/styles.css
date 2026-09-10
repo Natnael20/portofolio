@@ -129,3 +129,48 @@ a {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ========================================
+   HIDE GOOGLE TRANSLATE BAR
+   ======================================== */
+
+/* Hide the top banner frame */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Fix body position */
+body {
+  top: 0 !important;
+}
+
+/* Hide the original Google gadget */
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide the iframe that shows the bar */
+iframe.skiptranslate {
+  display: none !important;
+}
+
+/* Hide the tooltip popup */
+#goog-gt-tt, .goog-tooltip, .goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Extra classes that Google adds */
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-l4eHX-hSRGPd,
+.VIpgJd-yAWNEb-L7lbkb,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
+  display: none !important;
+}

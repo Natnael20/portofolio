@@ -13,5 +13,32 @@
 </head>
 <body>
   <app-root></app-root>
+
+
+<!-- Google Translate -->
+<script type="text/javascript">
+  // Force English on load unless user has explicitly chosen otherwise
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,sv',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  // Set default language to English
+  document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('preferredLang');
+    if (!savedLang) {
+      // Clear any Google cookies
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
+    }
+  });
+</script>
+<script type="text/javascript" 
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 </body>
 </html>
