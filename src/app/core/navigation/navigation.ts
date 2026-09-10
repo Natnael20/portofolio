@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class Navigation implements OnInit {
   isHome = false;
-  isScrolled = false;
   currentLang = 'en';
   showLangIntro = false;
 
@@ -33,11 +32,6 @@ export class Navigation implements OnInit {
       // Normal browser reload
       this.showLangIntro = true;
     }
-  }
-
-  @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    this.isScrolled = window.scrollY > 10;
   }
 
   toggleLanguage(): void {

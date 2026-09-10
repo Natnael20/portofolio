@@ -1,3 +1,7 @@
+
+<div>
+    <app-navigation></app-navigation>    
+</div>
 <header class="d-flex flex-column justify-content-center align-items-baseline">
     <div class="container bg-transparent mt-5">
         <div class="row">
@@ -58,32 +62,91 @@
     </div>
 </header>
 
-<div class="position-fixed top-0 w-100">
-    <app-navigation></app-navigation>    
-</div>
 
+<!-- About Section -->
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <!-- Left - Text -->
+      <div class="col-lg-7">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
+          <i class="bi bi-person me-1"></i> About Me
+        </span>
 
-<div class="about-section-snippet py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <div class="about-title">
-                    <span class="opacity-50 small">Who Am I</span>
-                    <h1 class="text-light opacity-75">About</h1>
-                </div>
-                <div class="mt-4 w-50 mx-auto">
-                    <p>
-                        I'm a developer who turns coffee into code. With a passion for
-                        building clean, scalable web applications that actually work.
-                        <br>
-                        When I'm not coding, you'll find me debugging, breaking things,
-                        or pretending to understand merge conflicts.
-                    </p>
-                </div>
-                <a routerLink="/about" class="btn-custom mt-2">
-                    Read More <i class="fas fa-arrow-right ms-2"></i>
-                </a>
-            </div>
+        <h2 class="display-5 fw-bold mb-3 text-light">
+          Building digital <br class="d-none d-sm-block">
+          <span class="text-primary">experiences</span> that matter
+        </h2>
+
+        <p class="opacity-75 lead">
+          I'm a developer who turns ideas into functional, beautiful web applications.
+          Currently interning and sharpening my skills in Angular, TypeScript, and
+          modern web technologies.
+        </p>
+
+        <p class="opacity-50">
+            When I'm not coding, I focus on learning new technologies, contributing to 
+            personal projects, and staying current with modern development practices.
+        </p>
+
+        <!-- Stats -->
+        <div class="d-flex gap-4 mt-4 text-light">
+          <div>
+            <span class="d-block fw-bold fs-3 text-primary">1+</span>
+            <span class="text-light opacity-75">Year/s Coding</span>
+          </div>
+          <div>
+            <span class="d-block fw-bold fs-3 text-primary">10+</span>
+            <span class="text-light opacity-75">Projects</span>
+          </div>
+          <div>
+            <span class="d-block fw-bold fs-3 text-primary">Intern</span>
+            <span class="text-light opacity-75">Current Role</span>
+          </div>
         </div>
+
+        <!-- CTA -->
+        <a routerLink="/about" class="btn-custom mt-4">
+          Read More <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+
+      <!-- Right - Info Card -->
+      <div class="col-lg-5">
+        <div class="about-card p-4 p-lg-5 rounded-4">
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-mortarboard fs-2 text-primary"></i>
+              <div class="text-light">
+                <h6 class="fw-bold mb-0">Education</h6>
+                <small class="">Computer and System Science</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-briefcase fs-2 text-primary"></i>
+              <div class="text-light">
+                <h6 class="fw-bold mb-0">Experience</h6>
+                <small>Intern Developer</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-code-square fs-2 text-primary"></i>
+              <div class="text-light">
+                <h6 class="fw-bold mb-0">Focus</h6>
+                <small>Backend and FullStack</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-calendar-check fs-2 text-primary"></i>
+                <div class="text-light">
+                    <h6 class="fw-bold mb-0">Availability</h6>
+                    <small>Open to Internships & Junior Roles</small>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+</section>
