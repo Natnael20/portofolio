@@ -130,6 +130,31 @@ a {
   100% { background-position: 0% 50%; }
 }
 
+/* Outline button (if not already global) */
+.btn-custom-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 50px;
+  border: 2px solid rgba(139, 92, 246, 0.5);
+  background: transparent;
+  color: #c4b5fd;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-custom-outline:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: #8b5cf6;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+}
+
 /* ========================================
    HIDE GOOGLE TRANSLATE BAR
    ======================================== */

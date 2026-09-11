@@ -1,69 +1,71 @@
-
-<div>
-    <app-navigation></app-navigation>    
-</div>
 <header class="d-flex flex-column justify-content-center align-items-baseline">
-    <div class="container bg-transparent mt-5">
-        <div class="row">
-            <div class="col-12 col-md-6 mt-3">
-                <div class="intro text-light">
-                    <span class="small opacity-50">I am</span>
-                    <h1 class="display-1 fw-bold">
-                        <span class="fa-1x">Josh Doe</span>
-                    </h1>
-                </div>
-                <div class="intro-detail mt-3">
-                    <p class="text-light opacity-75 small">
-                        Passionate about building clean, scalable web applications 
-                        that solve real-world problems. Specializing in Angular, 
-                        TypeScript, and modern web technologies.
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mt-3">
-                <div class="interactive-box text-center rounded-4 p-4">
-                    <div class="terminal-window text-start">
-                    <!-- Terminal Header -->
-                    <div class="terminal-header d-flex align-items-center gap-2 mb-3">
-                        <span class="terminal-dot bg-danger"></span>
-                        <span class="terminal-dot bg-warning"></span>
-                        <span class="terminal-dot bg-success"></span>
-                        <span class="terminal-title text-muted ms-2 small">bash — 80×24</span>
-                    </div>
-                    
-                    <!-- Terminal Body -->
-                    <div class="terminal-body">
-                        <p class="terminal-line mb-1">
-                        <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span class="text-white">git push</span>
-                        </p>
-                        <p class="terminal-line mb-1 text-danger">
-                        ! [rejected] main -> main (fetch first)
-                        </p>
-                        <p class="terminal-line mb-1 text-warning">
-                        error: failed to push some refs to 'github.com:user/repo.git'
-                        </p>
-                        <p class="terminal-line mb-1">
-                        <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span class="text-white">git pull --rebase</span>
-                        </p>
-                        <p class="terminal-line mb-1 text-danger">
-                        CONFLICT (content): Merge conflict in app.html
-                        </p>
-                        <p class="terminal-line mb-1">
-                        <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span class="text-white blinking-cursor">git push --force</span>
-                        </p>
-                        <p class="terminal-line shadow mt-2 text-light">
-                        Success! (just kidding, it's still broken)
-                        </p>
-                    </div>
-                    </div>
-                </div>
-            </div>
+  <div class="container bg-transparent mt-5">
+    <div class="row">
+      <div class="col-12 col-md-6 mt-3">
+        <div class="intro text-light">
+          <span class="small opacity-50">I am</span>
+          <h1 class="display-1 fw-bold">
+            <span class="fa-1x">Josh Doe</span>
+          </h1>
         </div>
+        <div class="intro-detail mt-3">
+          <p class="text-light opacity-75 small">
+            Passionate about building clean, scalable web applications
+            that solve real-world problems. Specializing in Angular,
+            TypeScript, and modern web technologies.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mt-3">
+        <div class="interactive-box text-center rounded-4 p-4">
+          <div class="terminal-window text-start">
+            <!-- Terminal Header -->
+            <div class="terminal-header d-flex align-items-center gap-2 mb-3">
+              <span class="terminal-dot bg-danger"></span>
+              <span class="terminal-dot bg-warning"></span>
+              <span class="terminal-dot bg-success"></span>
+              <span class="terminal-title text-muted ms-2 small">bash — 80×24</span>
+            </div>
+
+            <!-- Terminal Body -->
+            <div class="terminal-body">
+              <p class="terminal-line mb-1">
+                <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span
+                  class="text-white">git push</span>
+              </p>
+              <p class="terminal-line mb-1 text-danger">
+                ! [rejected] main -> main (fetch first)
+              </p>
+              <p class="terminal-line mb-1 text-warning">
+                error: failed to push some refs to 'github.com:user/repo.git'
+              </p>
+              <p class="terminal-line mb-1">
+                <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span
+                  class="text-white">git pull --rebase</span>
+              </p>
+              <p class="terminal-line mb-1 text-danger">
+                CONFLICT (content): Merge conflict in app.html
+              </p>
+              <p class="terminal-line mb-1">
+                <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span
+                  class="text-white blinking-cursor">git push --force</span>
+              </p>
+              <p class="terminal-line shadow mt-2 text-light">
+                Success! (just kidding, it's still broken)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="position-fixed top-0 w-100 z-3 nav-wrapper" [class.scrolled]="isScrolled">
+    <app-navigation></app-navigation>
+  </div>
 </header>
 
 
-<!-- About Section -->
 <!-- About Section -->
 <section class="py-5">
   <div class="container">
@@ -76,7 +78,7 @@
 
         <h2 class="display-5 fw-bold mb-3 text-light">
           Building digital <br class="d-none d-sm-block">
-          <span class="text-primary">experiences</span> that matter
+          <span class="gradient-text">experiences</span> that matter
         </h2>
 
         <p class="opacity-75 lead">
@@ -86,8 +88,8 @@
         </p>
 
         <p class="opacity-50">
-            When I'm not coding, I focus on learning new technologies, contributing to 
-            personal projects, and staying current with modern development practices.
+          When I'm not coding, I focus on learning new technologies, contributing to
+          personal projects, and staying current with modern development practices.
         </p>
 
         <!-- Stats -->
@@ -97,10 +99,6 @@
             <span class="text-light opacity-75">Year/s Coding</span>
           </div>
           <div>
-            <span class="d-block fw-bold fs-3 text-primary">10+</span>
-            <span class="text-light opacity-75">Projects</span>
-          </div>
-          <div>
             <span class="d-block fw-bold fs-3 text-primary">Intern</span>
             <span class="text-light opacity-75">Current Role</span>
           </div>
@@ -108,7 +106,7 @@
 
         <!-- CTA -->
         <a routerLink="/about" class="btn-custom mt-4">
-          Read More <i class="bi bi-arrow-right ms-2"></i>
+          Read More <i class="fa-solid fa-arrow-right-long text-light ms-1"></i>
         </a>
       </div>
 
@@ -138,13 +136,151 @@
               </div>
             </div>
             <div class="d-flex align-items-center gap-3">
-                <i class="bi bi-calendar-check fs-2 text-primary"></i>
-                <div class="text-light">
-                    <h6 class="fw-bold mb-0">Availability</h6>
-                    <small>Open to Internships & Junior Roles</small>
-                </div>
+              <i class="bi bi-calendar-check fs-2 text-primary"></i>
+              <div class="text-light">
+                <h6 class="fw-bold mb-0">Availability</h6>
+                <small>Open to Internships & Junior Roles</small>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="row mb-5">
+      <div class="col-lg-8">
+        <span class="badge text-bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
+          <i class="bi bi-folder me-1"></i> Selected Work
+        </span>
+        <h2 class="display-4 fw-bold mb-0">
+          Recent <span class="text-primary">builds</span>
+        </h2>
+      </div>
+      <div class="col-lg-4 d-flex align-items-end justify-content-lg-end">
+        <a routerLink="/projects" class="text-decoration-none text-light">
+          All projects <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Expanding Panels -->
+    <div class="project-showcase">
+
+      <!-- Panel 1 -->
+      <a href="#" target="_blank" class="showcase-panel">
+        <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80');"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <span class="panel-num">01</span>
+          <div class="panel-meta">
+            <h3 class="panel-title">Portfolio Website</h3>
+            <p class="panel-desc">
+              Modern portfolio with multi-language support and responsive design.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge text-bg-light bg-opacity-10">Angular</span>
+              <span class="badge text-bg-light bg-opacity-10">TypeScript</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Panel 2 -->
+      <a href="#" target="_blank" class="showcase-panel">
+        <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80');"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <span class="panel-num">02</span>
+          <div class="panel-meta">
+            <h3 class="panel-title">Task Manager</h3>
+            <p class="panel-desc">
+              Productivity app with drag-and-drop and local storage persistence.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge text-bg-light bg-opacity-10">Angular</span>
+              <span class="badge text-bg-light bg-opacity-10">RxJS</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Panel 3 -->
+      <a href="#" target="_blank" class="showcase-panel">
+        <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80');"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <span class="panel-num">03</span>
+          <div class="panel-meta">
+            <h3 class="panel-title">Weather Dashboard</h3>
+            <p class="panel-desc">
+              Real-time weather app with forecasts and data visualization.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge text-bg-light bg-opacity-10">TypeScript</span>
+              <span class="badge text-bg-light bg-opacity-10">API</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Panel 4 -->
+      <a href="#" target="_blank" class="showcase-panel">
+        <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80');"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <span class="panel-num">04</span>
+          <div class="panel-meta">
+            <h3 class="panel-title">Something Else</h3>
+            <p class="panel-desc">
+              A cool experiment with modern web tech and clean architecture.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge text-bg-light bg-opacity-10">Angular</span>
+              <span class="badge text-bg-light bg-opacity-10">Node.js</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="cta-box p-5 rounded-4 text-center position-relative overflow-hidden">
+      <!-- Decorative glow -->
+      <div class="cta-glow"></div>
+
+      <div class="position-relative">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
+          <i class="bi bi-send me-1"></i> Let's Connect
+        </span>
+
+        <h2 class="display-5 fw-bold mb-3">
+          Got a project in mind?<br>
+          <span class="text-primary">Let's make it happen.</span>
+        </h2>
+
+        <p class="text-muted lead mb-4 mx-auto" style="max-width: 520px;">
+          I'm currently open to internships, junior roles, and freelance work.
+          If you think we'd be a good fit, I'd love to hear from you.
+        </p>
+
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a routerLink="/contact" class="btn-custom">
+            <i class="bi bi-envelope me-2"></i> Get in Touch
+          </a>
+          <a routerLink="/projects" class="btn-custom-outline">
+            <i class="bi bi-folder me-2"></i> See My Work
+          </a>
         </div>
       </div>
     </div>

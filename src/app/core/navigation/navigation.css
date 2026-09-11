@@ -48,7 +48,7 @@
 
 /* Popover */
 .lang-intro {
-  position: fixed;
+  position: absolute;
   top: 60px;
   right: 100px;
   z-index: 5;   /* ← higher than sticky-top (1020) */
