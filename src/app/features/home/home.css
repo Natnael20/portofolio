@@ -80,11 +80,6 @@ header {
   box-shadow: 0 20px 60px rgba(13, 110, 253, 0.2);
 }
 
-/* About Teaser Section */
-section {
-    position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
 
 .fa-user-astronaut {
   transition: all 0.5s ease;

@@ -21,11 +21,27 @@ p, span {
 /* Smooth scrolling */
 html, body {
     height: 100%;
-    min-width: 350px;
+    min-width: 365px;
     scroll-behavior: smooth;
     background-color: var(--color-gray-950);
     font-family: 'Source Sans 3', sans-serif;
 }
+
+.nav-wrapper {
+  transition: all 1s ease;
+}
+
+.nav-wrapper.scrolled {
+  background: var(--color-gray-950);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 
 .underline,
 a {
@@ -164,6 +180,10 @@ a {
   display: none !important;
 }
 
+/* Fix body shift */
+body {
+  top: 0 !important;
+}
 
 /* Hide the original Google gadget */
 .goog-te-gadget {
@@ -179,12 +199,51 @@ iframe.skiptranslate {
 }
 
 /* Hide the tooltip popup */
-#goog-gt-tt, .goog-tooltip, .goog-tooltip:hover {
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover {
   display: none !important;
 }
 
-.goog-text-highlight {
-  background: none !important;
+/* ================================
+   KILL ALL GOOGLE HIGHLIGHT STYLES
+   ================================ */
+
+.goog-text-highlight,
+.goog-text-highlight *,
+font[style],
+font[style] * {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-color: transparent !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  /* Kill any pseudo-elements that draw borders */
+  content: none !important;
+}
+
+/* Kill pseudo-element borders Google adds */
+.goog-text-highlight::before,
+.goog-text-highlight::after,
+font[style]::before,
+font[style]::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Nuclear option — anything with "goog" in class */
+*[class*="goog"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
   box-shadow: none !important;
 }
 

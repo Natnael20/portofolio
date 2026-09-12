@@ -1,0 +1,184 @@
+<header class="d-flex flex-column justify-content-center">
+    <div class="container bg-transparent mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 mt-3">
+                <div class="page-name">
+                    <h1 class="display-1 fw-bold">
+                        <span class="fa-1x">About</span>
+                    </h1>
+                </div>
+                <div class="page-detail mt-3">
+                    <ul class="d-flex align-items-baseline px-0 gap-3">
+                        <li><a routerLink="/" class="text-light opacity-50 underline">Home</a></li>
+                        <li><span>/</span></li>
+                        <li><a routerLink="/about" class="text-light underline">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed top-0 w-100 z-3 nav-wrapper" [class.scrolled]="isScrolled">
+        <app-navigation></app-navigation>
+    </div>
+</header>
+
+<section class="container py-5">
+    <!-- Header -->
+    <div class="education-title ">
+        <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 rounded-pill mb-3">
+            <i class="fas fa-graduation-cap me-1"></i> Education
+        </span>
+        <h2 class="display-5 fw-bold text-light">
+            My academic background
+        </h2>
+    </div>
+
+    <!-- Timeline -->
+    <div class="row">
+        <div class="col-12  mt-5">
+            <div class="edu-item">
+                <div class="edu-content text-light">
+                    <span class="edu-year">2024 — Present</span>
+                    <h5 class="fw-bold mb-1">BSc Computer and System Science</h5>
+                    <p class="mb-2">Stockholm University</p>
+                    <p class="mb-0">
+                        Focused on software engineering, algorithms, and modern web development.
+                        Built foundational knowledge in OOP, data structures, and databases.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="edu-item mt-3">
+                <div class="edu-content text-light">
+                    <span class="edu-year">2020 — 2023</span>
+                    <h5 class="fw-bold mb-1">High School Diploma</h5>
+                    <p class="mb-2">Information and media technology</p>
+                    <p class="mb-0">
+                        Specialized in mathematics and computer science. First introduced
+                        to programming through self-taught projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container py-5">
+    <!-- Header -->
+    <div class="experience-title text-center mb-5">
+        <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 rounded-pill mb-3">
+            <i class="fas fa-briefcase me-1"></i> Experience
+        </span>
+        <h2 class="display-5 fw-bold mb-3 text-light">
+            Where I've <span class="gradient-text">worked</span>
+        </h2>
+        <p class="text-light opacity-75">My professional journey so far</p>
+    </div>
+
+    <!-- Single Experience -->
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="exp-card">
+
+                <!-- Header Row -->
+                <div class="exp-card-header">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="exp-logo">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-1 text-light">Full Stack Engineer</h3>
+                            <p class="text-light opacity-75 mb-1">Company Name · Full-time</p>
+                            <span class="exp-year">
+                                <span class="exp-pulse"></span> Jan 2025 — Present
+                            </span>
+                        </div>
+                    </div>
+                    <span class="exp-badge">Current</span>
+                </div>
+
+                <hr class="my-4 opacity-25">
+
+                <!-- Summary -->
+                <p class="text-light opacity-75 mb-4">
+                    Build and ship production features end-to-end — from SQL schema
+                    and REST APIs to Angular UI. Contribute to architecture and code
+                    reviews across the team.
+                </p>
+
+                <!-- What I Do -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="exp-highlight">
+                            <i class="fas fa-layer-group text-primary me-3"></i>
+                            <div>
+                                <div class="fw-semibold text-light small">Full-stack development</div>
+                                <div class="text-light opacity-50" style="font-size: 12px;">Angular · .NET · C#</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="exp-highlight">
+                            <i class="fas fa-database text-primary me-3"></i>
+                            <div>
+                                <div class="fw-semibold text-light small">API & database design</div>
+                                <div class="text-light opacity-50" style="font-size: 12px;">REST · SQL · EF Core</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="exp-highlight">
+                            <i class="fas fa-code-branch text-primary me-3"></i>
+                            <div>
+                                <div class="fw-semibold text-light small">Code reviews & collaboration</div>
+                                <div class="text-light opacity-50" style="font-size: 12px;">Git · PR reviews · Agile
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="exp-highlight">
+                            <i class="fas fa-rocket text-primary me-3"></i>
+                            <div>
+                                <div class="fw-semibold text-light small">Deployment & production</div>
+                                <div class="text-light opacity-50" style="font-size: 12px;">CI/CD · Production support
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What I've Learned -->
+                <div class="exp-learned-box mb-4">
+                    <h6 class="text-light fw-bold mb-3">
+                        <i class="fas fa-lightbulb text-primary me-2"></i>What I've learned
+                    </h6>
+                    <ul class="exp-learned mb-0">
+                        <li>Writing clean, testable code with SOLID principles</li>
+                        <li>Designing scalable, maintainable REST APIs</li>
+                        <li>Working in Agile teams with real production deadlines</li>
+                        <li>Debugging live production systems under pressure</li>
+                        <li>Communicating technical decisions clearly to teammates</li>
+                    </ul>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="d-flex flex-wrap gap-2" translate="no">
+                    <span class="tech-tag">Angular</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">.NET</span>
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">Entity Framework</span>
+                    <span class="tech-tag">SQL Server</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">Azure DevOps</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
