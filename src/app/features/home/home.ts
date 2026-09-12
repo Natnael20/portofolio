@@ -11,6 +11,6 @@ export class Home {
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    this.isScrolled = window.scrollY > 500;
+    this.isScrolled = window.scrollY > 30;
   }
 }

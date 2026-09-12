@@ -71,47 +71,49 @@
   <div class="container">
     <div class="row g-5 align-items-center">
       <!-- Left - Text -->
-      <div class="col-lg-7">
-        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
-          <i class="bi bi-person me-1"></i> About Me
-        </span>
-
-        <h2 class="display-5 fw-bold mb-3 text-light">
-          Building digital <br class="d-none d-sm-block">
-          <span class="gradient-text">experiences</span> that matter
-        </h2>
-
-        <p class="opacity-75 lead">
-          I'm a developer who turns ideas into functional, beautiful web applications.
-          Currently interning and sharpening my skills in Angular, TypeScript, and
-          modern web technologies.
-        </p>
-
-        <p class="opacity-50">
-          When I'm not coding, I focus on learning new technologies, contributing to
-          personal projects, and staying current with modern development practices.
-        </p>
-
-        <!-- Stats -->
-        <div class="d-flex gap-4 mt-4 text-light">
-          <div>
-            <span class="d-block fw-bold fs-3 text-primary">1+</span>
-            <span class="text-light opacity-75">Year/s Coding</span>
+      <div class="col-12 col-md-7">
+        <div class="px-3">
+          <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
+            <i class="bi bi-person me-1"></i> About Me
+          </span>
+          
+          <h2 class="display-5 fw-bold mb-3 text-light">
+            Building digital <br class="d-none d-sm-block">
+            <span class="gradient-text">experiences</span> that matter
+          </h2>
+          
+          <p class="opacity-75 lead">
+            I'm a developer who turns ideas into functional, beautiful web applications.
+            Currently interning and sharpening my skills in Angular, TypeScript, and
+            modern web technologies.
+          </p>
+          
+          <p class="opacity-50">
+            When I'm not coding, I focus on learning new technologies, contributing to
+            personal projects, and staying current with modern development practices.
+          </p>
+          
+          <!-- Stats -->
+          <div class="d-flex gap-4 mt-4 text-light">
+            <div>
+              <span class="d-block fw-bold fs-3 text-primary">1+</span>
+              <span class="text-light opacity-75">Year/s Coding</span>
+            </div>
+            <div>
+              <span class="d-block fw-bold fs-3 text-primary">Intern</span>
+              <span class="text-light opacity-75">Current Role</span>
+            </div>
           </div>
-          <div>
-            <span class="d-block fw-bold fs-3 text-primary">Intern</span>
-            <span class="text-light opacity-75">Current Role</span>
-          </div>
+          
+          <!-- CTA -->
+          <a routerLink="/about" class="btn-custom mt-4">
+            Read More <i class="fa-solid fa-arrow-right-long text-light ms-1"></i>
+          </a>
         </div>
-
-        <!-- CTA -->
-        <a routerLink="/about" class="btn-custom mt-4">
-          Read More <i class="fa-solid fa-arrow-right-long text-light ms-1"></i>
-        </a>
       </div>
 
       <!-- Right - Info Card -->
-      <div class="col-lg-5">
+      <div class="col-12 col-md-5 mt-5">
         <div class="about-card p-4 p-lg-5 rounded-4">
           <div class="d-flex flex-column gap-3">
             <div class="d-flex align-items-center gap-3">
@@ -125,7 +127,7 @@
               <i class="bi bi-briefcase fs-2 text-primary"></i>
               <div class="text-light">
                 <h6 class="fw-bold mb-0">Experience</h6>
-                <small>Intern Developer</small>
+                <small>FullStack Developer Internship</small>
               </div>
             </div>
             <div class="d-flex align-items-center gap-3">
@@ -139,8 +141,7 @@
               <i class="bi bi-calendar-check fs-2 text-primary"></i>
               <div class="text-light">
                 <h6 class="fw-bold mb-0">Availability</h6>
-                <small>Open to Internships & Junior Roles</small>
-              </div>
+                <small>Open to Junior Frontend / Full-Stack Roles</small>              </div>
             </div>
           </div>
         </div>
@@ -149,105 +150,110 @@
   </div>
 </section>
 
+<!-- Projects Section -->
 <section class="py-5">
   <div class="container">
-
     <!-- Header -->
-    <div class="row mb-5">
-      <div class="col-lg-8">
-        <span class="badge text-bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
-          <i class="bi bi-folder me-1"></i> Selected Work
-        </span>
-        <h2 class="display-4 fw-bold mb-0">
-          Recent <span class="text-primary">builds</span>
-        </h2>
-      </div>
-      <div class="col-lg-4 d-flex align-items-end justify-content-lg-end">
-        <a routerLink="/projects" class="text-decoration-none text-light">
-          All projects <i class="bi bi-arrow-right ms-1"></i>
-        </a>
-      </div>
+    <div class="text-center mb-5">
+      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
+        <i class="bi bi-folder me-1"></i> Projects
+      </span>
+      <h2 class="display-5 fw-bold mb-3 text-light">Projects I've Built</h2>
+      <p class="text-light opacity-75">A selection of projects I'm proud of</p>
     </div>
 
-    <!-- Expanding Panels -->
-    <div class="project-showcase">
-
-      <!-- Panel 1 -->
-      <a href="#" target="_blank" class="showcase-panel">
-        <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80');"></div>
-        <div class="panel-overlay"></div>
-        <div class="panel-content">
-          <span class="panel-num">01</span>
-          <div class="panel-meta">
-            <h3 class="panel-title">Portfolio Website</h3>
-            <p class="panel-desc">
-              Modern portfolio with multi-language support and responsive design.
+    <!-- Projects Grid -->
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Book Management">
+            <div class="project-overlay">
+              <a href="#" class="project-link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="#" class="project-link" target="_blank"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body text-light">
+            <h5 class="fw-bold mb-2">Book Management</h5>
+            <p class="small mb-3">
+              A full-stack CRUD application with a .NET/C# REST API backend and 
+              Angular frontend. Features JWT authentication, book catalog management, 
+              and a RESTful API designed with clean architecture and SOLID principles.
             </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-bg-light bg-opacity-10">Angular</span>
-              <span class="badge text-bg-light bg-opacity-10">TypeScript</span>
+            <div class="d-flex flex-wrap gap-2" translate="no">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">.NET</span>
+              <span class="tech-tag">REST API</span>
+              <span class="tech-tag">JSON</span>
+              <span class="tech-tag">Bootstrap</span>
             </div>
           </div>
         </div>
-      </a>
-
-      <!-- Panel 2 -->
-      <a href="#" target="_blank" class="showcase-panel">
-        <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80');"></div>
-        <div class="panel-overlay"></div>
-        <div class="panel-content">
-          <span class="panel-num">02</span>
-          <div class="panel-meta">
-            <h3 class="panel-title">Task Manager</h3>
-            <p class="panel-desc">
-              Productivity app with drag-and-drop and local storage persistence.
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80" alt="Task Manager">
+            <div class="project-overlay">
+              <a href="#" class="project-link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="#" class="project-link" target="_blank"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h5 class="fw-bold mb-2 text-light">Task Manager</h5>
+            <p class="small mb-3">
+              A cross-platform personal productivity system built with a Java backend, 
+              React web client, and React Native mobile app. Organizes work into 
+              tasks that hold nested lists and notes for quick thoughts and reminders.
             </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-bg-light bg-opacity-10">Angular</span>
-              <span class="badge text-bg-light bg-opacity-10">RxJS</span>
+            <div class="d-flex flex-wrap gap-2" translate="no">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Spring Boot</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Database</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">REST API</span>
             </div>
           </div>
         </div>
-      </a>
-
-      <!-- Panel 3 -->
-      <a href="#" target="_blank" class="showcase-panel">
-        <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80');"></div>
-        <div class="panel-overlay"></div>
-        <div class="panel-content">
-          <span class="panel-num">03</span>
-          <div class="panel-meta">
-            <h3 class="panel-title">Weather Dashboard</h3>
-            <p class="panel-desc">
-              Real-time weather app with forecasts and data visualization.
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+  <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80" alt="Bank Management">
+            <div class="project-overlay">
+              <a href="#" class="project-link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="#" class="project-link" target="_blank"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h5 class="fw-bold mb-2 text-light">Bank Management</h5>
+            <p class="small mb-3">
+              A desktop banking application built in Java using Swing for the GUI. 
+              Designed with pure object-oriented principles. Accounts, transactions, 
+              and customers modeled as independent classes. Supports deposits, 
+              withdrawals, transfers, and balance tracking with persistent data.
             </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-bg-light bg-opacity-10">TypeScript</span>
-              <span class="badge text-bg-light bg-opacity-10">API</span>
+            <div class="d-flex flex-wrap gap-2" translate="no">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Swing</span>
+              <span class="tech-tag">OOP</span>
+              <span class="tech-tag">File I/O</span>
             </div>
           </div>
         </div>
-      </a>
+      </div>
 
-      <!-- Panel 4 -->
-      <a href="#" target="_blank" class="showcase-panel">
-        <div class="panel-bg" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80');"></div>
-        <div class="panel-overlay"></div>
-        <div class="panel-content">
-          <span class="panel-num">04</span>
-          <div class="panel-meta">
-            <h3 class="panel-title">Something Else</h3>
-            <p class="panel-desc">
-              A cool experiment with modern web tech and clean architecture.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-bg-light bg-opacity-10">Angular</span>
-              <span class="badge text-bg-light bg-opacity-10">Node.js</span>
-            </div>
-          </div>
-        </div>
-      </a>
+    </div>
 
+    <!-- View All Button -->
+    <div class="text-center mt-5">
+      <a routerLink="/projects" class="btn-custom">
+        View All Projects <i class="fa-solid fa-arrow-right-long text-light"></i>
+      </a>
     </div>
   </div>
 </section>
@@ -256,30 +262,26 @@
 <section class="py-5">
   <div class="container">
     <div class="cta-box p-5 rounded-4 text-center position-relative overflow-hidden">
-      <!-- Decorative glow -->
       <div class="cta-glow"></div>
 
       <div class="position-relative">
-        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
-          <i class="bi bi-send me-1"></i> Let's Connect
-        </span>
-
-        <h2 class="display-5 fw-bold mb-3">
-          Got a project in mind?<br>
-          <span class="text-primary">Let's make it happen.</span>
+        <h2 class="display-5 fw-bold mb-3 text-light">
+          Looking for an Engineer?<br>
+          <span class="text-primary">Let's talk.</span>
         </h2>
 
-        <p class="text-muted lead mb-4 mx-auto" style="max-width: 520px;">
-          I'm currently open to internships, junior roles, and freelance work.
-          If you think we'd be a good fit, I'd love to hear from you.
+        <p class="lead mb-4 mx-auto text-light opacity-75" style="max-width: 520px;">
+          I'm a software engineer looking for a junior role where I can 
+          contribute, learn, and grow. If that sounds like a fit, I'd love 
+          to hear from you.
         </p>
 
         <div class="d-flex gap-3 justify-content-center flex-wrap">
           <a routerLink="/contact" class="btn-custom">
-            <i class="bi bi-envelope me-2"></i> Get in Touch
+            <i class="fas fa-envelope me-2"></i> Contact Me
           </a>
           <a routerLink="/projects" class="btn-custom-outline">
-            <i class="bi bi-folder me-2"></i> See My Work
+            <i class="fas fa-folder me-2"></i> See My Work
           </a>
         </div>
       </div>

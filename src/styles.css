@@ -164,10 +164,6 @@ a {
   display: none !important;
 }
 
-/* Fix body position */
-body {
-  top: 0 !important;
-}
 
 /* Hide the original Google gadget */
 .goog-te-gadget {
