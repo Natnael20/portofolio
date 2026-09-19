@@ -8,3 +8,87 @@ header {
   width: 100%;
   height: 80dvh;
 }
+
+
+.exp-card {
+  position: relative;
+  overflow: hidden;
+  padding-left: 20px; /* make room for the rail */
+}
+
+.exp-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #6366f1 0%,
+    #8b5cf6 50%,
+    rgba(139, 92, 246, 0.15) 100%
+  );
+  border-radius: 3px;
+}
+
+.exp-card::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -6px;
+  width: 20px;
+  height: 10px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.7);
+  z-index: 2;
+  animation: railPulse 2.4s infinite ease-out;
+}
+
+@keyframes railPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7), 0 0 16px rgba(139, 92, 246, 0.7); }
+  70%  { box-shadow: 0 0 0 12px rgba(139, 92, 246, 0), 0 0 16px rgba(139, 92, 246, 0.7); }
+  100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0), 0 0 16px rgba(139, 92, 246, 0.7); }
+}
+
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exp-list li {
+  position: relative;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  line-height: 1.55;
+  background: rgba(15, 15, 20, 0.5);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.exp-list li::before {
+  content: '▸';
+  color: #8b5cf6;
+  margin-right: 10px;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.exp-list li:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.06);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+}
+
+.exp-list li:hover::before {
+  transform: translateX(3px);
+  color: #a78bfa;
+}
