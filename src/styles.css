@@ -95,6 +95,7 @@ a {
   color: #fff;
   box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
   letter-spacing: 0.5px;
+  white-space: nowrap;
   position: relative;
   overflow: hidden;
 }

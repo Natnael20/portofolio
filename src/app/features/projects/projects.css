@@ -1,0 +1,344 @@
+header {
+  background:
+    linear-gradient(135deg, rgba(15, 15, 20, 0.95), rgba(30, 15, 45, 0.85)),
+    url('https://media.istockphoto.com/id/1414981473/photo/futuristic-flight-through-a-digital-line-landscape-blue-dust-particle-abstract-background-3d.webp?a=1&b=1&s=612x612&w=0&k=20&c=Z3zIMBTA2zfL4tResOPslIEf3j7ZDXI2pQIaUFFz9AU=');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 90dvh;
+}
+
+
+/* ================================
+   SHARED CARD (Process + Values)
+   ================================ */
+.step-card {
+  position: relative;
+  height: 100%;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+/* Purple gradient line at top — appears on hover */
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.step-card:hover::before {
+  transform: scaleX(1);
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  background: rgba(139, 92, 246, 0.06);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 20px 50px rgba(139, 92, 246, 0.15);
+}
+
+/* Step number badge (01, 02...) */
+.step-num {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(139, 92, 246, 0.4);
+  transition: color 0.3s ease;
+}
+
+.step-card:hover .step-num {
+  color: #a78bfa;
+}
+
+/* Icon */
+.step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 1.4rem;
+  color: #a5b4fc;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 14px;
+  margin-bottom: 18px;
+  transition: all 0.35s ease;
+}
+
+.step-card:hover .step-icon {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.5);
+  transform: rotate(-6deg) scale(1.05);
+}
+
+/* Title */
+.step-card h6 {
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.step-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .step-card {
+    padding: 24px 20px;
+  }
+
+  .step-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Pulsing green dot */
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: livePulse 2s infinite;
+}
+
+@keyframes livePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70%  { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.tracking-wide {
+  letter-spacing: 2px;
+  color: #4ade80;
+  font-size: 11px;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.category {
+  position: sticky;
+  top: 100px;   
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  transition: all 1s linear;
+}
+
+.category::-webkit-scrollbar {
+  display: none;
+}
+
+.category {
+  scrollbar-width: none;
+}
+
+/* ================================
+   PROJECT MODAL
+   ================================ */
+.project-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-modal-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-modal {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  padding: 32px 28px;
+  background: #14141a;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  animation: modalPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* Icon badge */
+.modal-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 1.4rem;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+}
+
+/* Title */
+.modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+
+.modal-subtitle {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 24px;
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: left;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.modal-btn i {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.modal-btn .btn-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.modal-btn .btn-sub {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
+}
+
+/* Primary — Live Site */
+.modal-btn-primary {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
+
+.modal-btn-primary .btn-sub {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.modal-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.5);
+}
+
+/* Secondary — GitHub */
+.modal-btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.modal-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Disabled links */
+.modal-btn.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Card cursor */
+.project-card {
+  cursor: pointer;
+}
+
+.project-link {
+  pointer-events: none; /* disable the overlay links, click goes to card */
+}
+

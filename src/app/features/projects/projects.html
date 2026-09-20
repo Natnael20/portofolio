@@ -1,0 +1,281 @@
+<header class="d-flex flex-column justify-content-center">
+    <div class="container bg-transparent mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 mt-3">
+                <div class="page-name">
+                    <h1 class="display-1 fw-bold">
+                        <span class="fa-1x">Projects</span>
+                    </h1>
+                </div>
+                <div class="page-detail mt-3">
+                    <ul class="d-flex align-items-baseline px-0 gap-3">
+                        <li><a routerLink="/" class="text-light opacity-50 underline">Home</a></li>
+                        <li><span>/</span></li>
+                        <li><a routerLink="/project" class="text-light underline">Project</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed top-0 w-100 z-3 nav-wrapper" [class.scrolled]="isScrolled">
+        <app-navigation></app-navigation>
+    </div>
+</header>
+
+<section class="container">
+    <div class="mt-5">
+        <div class="section-header text-center mb-5">
+            <span class="section-label small opacity-50">
+                <i class="fas fa-diagram-project"></i> Process
+            </span>
+            <h2 class="section-title text-light fw-bold">
+                How I <span class="gradient-text">build</span>
+            </h2>
+            <p class="section-subtitle small opacity-50">My approach to every project</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg">
+                <div class="step-card">
+                    <span class="step-num">01</span>
+                    <i class="fas fa-lightbulb step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Plan</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Understand the problem, define scope, pick the right tools
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg">
+                <div class="step-card">
+                    <span class="step-num">02</span>
+                    <i class="fas fa-drafting-compass step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Design</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Model data, sketch architecture, plan the API surface
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg">
+                <div class="step-card">
+                    <span class="step-num">03</span>
+                    <i class="fas fa-code step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Build</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Write clean, tested code with clear separation of concerns
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg">
+                <div class="step-card">
+                    <span class="step-num">04</span>
+                    <i class="fas fa-rocket step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Ship</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Deploy, monitor, iterate based on real usage
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg">
+                <div class="step-card">
+                    <span class="step-num">05</span>
+                    <i class="fas fa-sync-alt step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Iterate</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Refine in short cycles with continuous feedback
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="mt-5">
+        <div class="currently-card position-relative p-4 rounded-2">
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="live-dot rounded-circle"></span>
+                <span class="text-uppercase small fw-bold tracking-wide">Currently Building</span>
+            </div>
+            <h3 class="fw-bold text-light mb-2">Trivia Quiz App</h3>
+            <p class="text-light opacity-75 mb-3">
+                An Android quiz app built in Java that pulls live trivia questions
+                from the public Trivia API. Features category selection, timed rounds,
+                score tracking, and a clean mobile UI.
+            </p>
+            <div class="d-flex flex-wrap gap-2" translate="no">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Android</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">Trivia API</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container-fluid mt-5 p-5">
+    <div class="row g-4">
+
+        <!-- LEFT: Category Filter -->
+        <div class="col-12 col-md-2">
+            <div class="category">
+                <ul class="category-list list-unstyled">
+                    <li>
+                        <button class="btn-custom p-2 px-4 w-100" [class.active]="selectedCategory === 'all'"
+                            (click)="filterCategory('all')">
+                            <i class="fas fa-th-large me-2"></i> All Projects
+                            <span class="category-count">{{ projects.length }}</span>
+                        </button>
+                    </li>
+                    <li class="mt-3">
+                        <button class="btn-custom p-2 px-4 w-100" [class.active]="selectedCategory === 'fullstack'"
+                            (click)="filterCategory('fullstack')">
+                            <i class="fas fa-layer-group me-2"></i> Full Stack
+                            <span class="category-count">{{ countByCategory('fullstack') }}</span>
+                        </button>
+                    </li>
+                    <li class="mt-3">
+                        <button class="btn-custom p-2 px-4 w-100" [class.active]="selectedCategory === 'frontend'"
+                            (click)="filterCategory('frontend')">
+                            <i class="fas fa-code me-2"></i> Frontend
+                            <span class="category-count">{{ countByCategory('frontend') }}</span>
+                        </button>
+                    </li>
+                    <li class="mt-3">
+                        <button class="btn-custom p-2 px-4 w-100" [class.active]="selectedCategory === 'backend'"
+                            (click)="filterCategory('backend')">
+                            <i class="fas fa-server me-2"></i> Backend
+                            <span class="category-count">{{ countByCategory('backend') }}</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- RIGHT: Projects Shower -->
+        <div class="col-12 col-md-10">
+            <div class="projects-shower">
+                <div class="row">
+
+                    <div class="col-12 col-md-4 mb-5" *ngFor="let project of filteredProjects">
+                        <div class="project-card" (click)="openProjectModal(project)">
+                            <div class="project-image">
+                                <img [src]="project.image" [alt]="project.title" width="300" height="200">
+                            </div>
+                            <div class="project-body text-light mt-3">
+                                <span class="project-category opacity-50 text-capitalize">{{ project.category }}</span>
+                                <h5 class="fw-bold mb-2">{{ project.title }}</h5>
+                                <p class="small mb-3">{{ project.description }}</p>
+                                <div class="d-flex flex-wrap gap-2" translate="no">
+                                    <span class="tech-tag" *ngFor="let tech of project.tech">{{ tech }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Empty state -->
+                    <div class="col-12 text-center py-5" *ngIf="filteredProjects.length === 0">
+                        <i class="fas fa-folder-open fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">No projects in this category yet.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Project Link Modal -->
+        <div class="project-modal-backdrop" [class.show]="selectedProject" (click)="closeProjectModal()">
+        
+            <div class="project-modal" (click)="$event.stopPropagation()" *ngIf="selectedProject">
+        
+                <button class="modal-close" (click)="closeProjectModal()">
+                    <i class="fas fa-xmark"></i>
+                </button>
+        
+                <div class="modal-icon">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </div>
+        
+                <h4 class="modal-title">Open {{ selectedProject.title }}?</h4>
+                <p class="modal-subtitle">
+                    Where would you like to go?
+                </p>
+        
+                <div class="modal-actions">
+                    <a [href]="selectedProject.liveUrl || '#'" class="modal-btn modal-btn-primary" target="_blank"
+                        [class.disabled]="!selectedProject.liveUrl" (click)="closeProjectModal()">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <span class="btn-title">Live Site</span>
+                            <span class="btn-sub">View it in action</span>
+                        </div>
+                    </a>
+        
+                    <a [href]="selectedProject.githubUrl || '#'" class="modal-btn modal-btn-secondary" target="_blank"
+                        [class.disabled]="!selectedProject.githubUrl" (click)="closeProjectModal()">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <span class="btn-title">GitHub Repo</span>
+                            <span class="btn-sub">Browse the source</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="container mt-5">
+    <div class="p-4">
+        <div class="section-header text-center mb-5">
+            <span class="section-label small opacity-50">
+                <i class="fas fa-gem"></i> Values
+            </span>
+            <h2 class="section-title text-light">
+                What I <span class="gradient-text">care</span> about
+            </h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card">
+                    <i class="fas fa-broom step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Clean code</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Readable, maintainable, easy to extend
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card">
+                    <i class="fas fa-bolt step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Performance</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Fast responses, efficient queries, lean bundles
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card">
+                    <i class="fas fa-shield-halved step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Reliability</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Validated inputs, safe defaults, graceful failures
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card">
+                    <i class="fas fa-users step-icon"></i>
+                    <h6 class="text-light fw-bold mb-2">Teamwork</h6>
+                    <p class="text-light opacity-75 small mb-0">
+                        Clear communication, honest reviews, no ego
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

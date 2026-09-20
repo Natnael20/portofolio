@@ -10,10 +10,9 @@ import { Home } from './features/home/home';
 import { About } from './features/about/about';
 import { Projects } from './features/projects/projects';
 import { Contact } from './features/contact/contact';
-import { ProjectCard } from './shared/project-card/project-card';
 
 @NgModule({
-  declarations: [App, Navigation, Footer, Home, About, Projects, Contact, ProjectCard],
+  declarations: [App, Navigation, Footer, Home, About, Projects, Contact],
   imports: [BrowserModule, CommonModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
