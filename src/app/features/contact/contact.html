@@ -1,0 +1,98 @@
+<header class="d-flex flex-column justify-content-center">
+    <div class="container bg-transparent mt-5">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <h1 class="display-3 fw-bold text-light mb-3 mt-3">
+                    Let's <span class="gradient-text">talk</span>
+                </h1>            
+                <ul class="d-flex align-items-baseline px-0 gap-3 list-unstyled">
+                    <li><a routerLink="/" class="opacity-50 text-light underline">Home</a></li>
+                    <li class="text-light opacity-50">/</li>
+                    <li><span class="text-light">Contact</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed top-0 w-100 z-3 nav-wrapper" [class.scrolled]="isScrolled">
+        <app-navigation></app-navigation>
+    </div>
+</header>
+
+<!-- Contact Section -->
+<section class="container py-5">
+    <div class="row g-5 justify-content-center">
+
+        <div class="col-lg-8">
+            <span class="section-label mb-3 small text-light opacity-50">
+                Get in Touch
+            </span>
+            <h2 class="section-title mb-4 text-light fw-bold">
+                Reach out <span class="gradient-text">anytime</span>
+            </h2>
+
+            <!-- Contact Cards -->
+            <div class="row g-3">
+
+                <div class="col-6">
+                    <a href="mailto:natnaelweldetensae@gmail.com" class="contact-item h-100">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">Natnaelweldetensae@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a href="tel:0046760164509" target="_blank" class="contact-item h-100">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">Phone Number</span>
+                            <span class="contact-value">0046760164509</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a href="https://github.com/Natnael20" target="_blank" class="contact-item h-100">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">Natnael20</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="contact-item h-100">
+                        <div class="contact-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">Sweden, Stockholm</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Availability status -->
+            <div class="status-block mt-4">
+                <span class="live-dot"></span>
+                <div>
+                    <span class="status-title">Available for work</span>
+                    <span class="status-sub">Open to junior software engineer roles</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
