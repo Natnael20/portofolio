@@ -20,21 +20,79 @@
 </header>
 
 <!-- Contact Section -->
-<section class="container py-5">
-    <div class="row g-5 justify-content-center">
+<section class="container">
+    <div class="row">
 
-        <div class="col-lg-8">
-            <span class="section-label mb-3 small text-light opacity-50">
+        <div class="contact-intro p-3 mt-5">
+            <span class="section-label small badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">
                 Get in Touch
             </span>
             <h2 class="section-title mb-4 text-light fw-bold">
                 Reach out <span class="gradient-text">anytime</span>
             </h2>
+        </div>
 
+        <div class="col-12 col-md-7">
+            <form id="contact-form" #contactForm (ngSubmit)="onSubmit()" novalidate>
+        
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                </div>
+        
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                </div>
+        
+                <!-- Subject -->
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-input" placeholder="What's this about?" required>
+                </div>
+        
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-input" rows="6"
+                        placeholder="Tell me about your project or question..." required></textarea>
+                </div>
+        
+                <!-- Submit -->
+                <button type="submit" class="form-submit" [disabled]="isSubmitting">
+                    <span *ngIf="!isSubmitting">
+                        <i class="fas fa-paper-plane me-2"></i> Send Message
+                    </span>
+                    <span *ngIf="isSubmitting">
+                        <i class="fas fa-spinner fa-spin me-2"></i> Sending...
+                    </span>
+                </button>
+        
+                <!-- Success -->
+                <div class="form-feedback success" *ngIf="submitSuccess">
+                    <div class="feedback-content">
+                        <strong>Message sent successfully</strong>
+                    </div>
+                </div>
+        
+                <!-- Error -->
+                <div class="form-feedback error" *ngIf="submitError">
+                    <div class="feedback-icon error-icon"><i class="fas fa-exclamation"></i></div>
+                    <div class="feedback-content">
+                        <strong>Something went wrong</strong>
+                        <span>Please try again, or email me directly.</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-12 col-md-4">
             <!-- Contact Cards -->
-            <div class="row g-3">
+            <div class="row d-grid">
 
-                <div class="col-6">
+                <div class="col-12">
                     <a href="mailto:natnaelweldetensae@gmail.com" class="contact-item h-100">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
@@ -46,7 +104,7 @@
                     </a>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-12">
                     <a href="tel:0046760164509" target="_blank" class="contact-item h-100">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
@@ -58,7 +116,7 @@
                     </a>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-12">
                     <a href="https://github.com/Natnael20" target="_blank" class="contact-item h-100">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
@@ -70,7 +128,7 @@
                     </a>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-12">
                     <div class="contact-item h-100">
                         <div class="contact-icon">
                             <i class="fas fa-location-dot"></i>
