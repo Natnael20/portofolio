@@ -184,6 +184,20 @@ a {
   letter-spacing: 0.3px;
 }
 
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.15);
+}
+
 /* ========================================
    HIDE GOOGLE TRANSLATE BAR
    ======================================== */

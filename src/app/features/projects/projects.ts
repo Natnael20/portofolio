@@ -148,7 +148,7 @@ export class Projects {
       description: 'A Spring Boot application for employee management, built with Java and the Spring Boot framework. It provides backend functionality for handling employee records, likely including operations like adding, viewing, updating, and deleting employee data through a REST API.',
       category: 'Backend',
       tech: ['Java'],
-      image: 'https://images.unsplash.com/photo-1624927637280-f033784c1279?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGludmVudG9yeXxlbnwwfHwwfHx8MA%3D%3D',
+      image: 'https://images.unsplash.com/photo-1495435229349-e86db7bfa013?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHBhcmtpbmd8ZW58MHx8MHx8fDA%3D',
       liveUrl: '',
       githubUrl: 'https://github.com/Natnael20/inventoryManagementSystem'
     },
@@ -217,7 +217,7 @@ export class Projects {
       title: 'IRC Chat System',
       description: 'A small-scale IRC (Internet Relay Chat) system built in Java, implementing a client-server chat architecture.',
       category: 'backend',
-      tech: ['Java', 'OOP'],
+      tech: ['Java', 'OOP', 'TCP', 'Socket'],
       image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&q=80',
       liveUrl: '',
       githubUrl: 'https://github.com/Natnael20/IRCChatSystem'
@@ -227,7 +227,7 @@ export class Projects {
       title: 'Event Management',
       description: 'A RESTful backend for managing events, built with Spring Boot and MySQL. Exposes CRUD endpoints for creating, retrieving, updating, and deleting events, with clean controller-service-repository layering and JPA-based persistence.',
       category: 'backend',
-      tech: ['Java', 'Spring Boot', 'MySQL', 'REST API', 'JPA'],
+      tech: ['Java', 'Spring Boot', 'MySQL', 'REST API'],
       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80',
       liveUrl: '',
       githubUrl: 'https://github.com/Natnael20/Event'

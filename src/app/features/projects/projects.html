@@ -106,7 +106,7 @@
             <div class="d-flex flex-wrap gap-2" translate="no">
                 <span class="tech-tag">Java</span>
                 <span class="tech-tag">Android</span>
-                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">TCP Networking</span>
                 <span class="tech-tag">Trivia API</span>
             </div>
         </div>
@@ -159,7 +159,7 @@
                 <div class="row">
 
                     <div class="col-12 col-md-4 mb-5" *ngFor="let project of filteredProjects">
-                        <div class="project-card" (click)="openProjectModal(project)">
+                        <div class="project-card rounded-2" (click)="openProjectModal(project)">
                             <div class="project-image">
                                 <img [src]="project.image" [alt]="project.title" width="300" height="200">
                             </div>

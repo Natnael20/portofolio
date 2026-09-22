@@ -333,12 +333,4 @@ img {
   pointer-events: none;
 }
 
-/* Card cursor */
-.project-card {
-  cursor: pointer;
-}
-
-.project-link {
-  pointer-events: none; /* disable the overlay links, click goes to card */
-}
 

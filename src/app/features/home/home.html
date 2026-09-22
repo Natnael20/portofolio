@@ -1,19 +1,16 @@
 <header class="d-flex flex-column justify-content-center align-items-baseline">
-  <div class="container bg-transparent mt-5">
+  <app-shader-background></app-shader-background>
+  <div class="container bg-transparent mt-5 z-3">
     <div class="row">
       <div class="col-12 col-md-6 mt-3">
         <div class="intro text-light">
           <span class="small opacity-50">I am</span>
           <h1 class="display-1 fw-bold">
-            <span class="fa-1x">Josh Doe</span>
+            <span class="fa-1x">Natnael Weldetensae</span>
           </h1>
         </div>
         <div class="intro-detail mt-3">
-          <p class="text-light opacity-75 small">
-            Passionate about building clean, scalable web applications
-            that solve real-world problems. Specializing in Angular,
-            TypeScript, and modern web technologies.
-          </p>
+          <p class="text-light opacity-75"> Passionate Computer and System Science student driven by ambition and a love for building meaningful, reliable solutions. </p>
         </div>
       </div>
       <div class="col-12 col-md-6 mt-3">
@@ -26,46 +23,31 @@
               <span class="terminal-dot bg-success"></span>
               <span class="terminal-title text-muted ms-2 small">bash — 80×24</span>
             </div>
-
             <!-- Terminal Body -->
             <div class="terminal-body">
               <p class="terminal-line mb-1">
-                <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span
-                  class="text-white">git push</span>
+                <span class="text-success">user@portfolio</span>: <span class="text-primary">~/projects</span>$ <span class="text-white">git push</span>
               </p>
-              <p class="terminal-line mb-1 text-danger">
-                ! [rejected] main -> main (fetch first)
-              </p>
-              <p class="terminal-line mb-1 text-warning">
-                error: failed to push some refs to 'github.com:user/repo.git'
-              </p>
+              <p class="terminal-line mb-1 text-danger"> ! [rejected] main -> main (fetch first) </p>
+              <p class="terminal-line mb-1 text-warning"> error: failed to push some refs to 'github.com:user/repo.git' </p>
               <p class="terminal-line mb-1">
-                <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span
-                  class="text-white">git pull --rebase</span>
+                <span class="text-success">user@portfolio</span>: <span class="text-primary">~/projects</span>$ <span class="text-white">git pull --rebase</span>
               </p>
-              <p class="terminal-line mb-1 text-danger">
-                CONFLICT (content): Merge conflict in app.html
-              </p>
+              <p class="terminal-line mb-1 text-danger"> CONFLICT (content): Merge conflict in app.html </p>
               <p class="terminal-line mb-1">
-                <span class="text-success">user@portfolio</span>:<span class="text-primary">~/projects</span>$ <span
-                  class="text-white blinking-cursor">git push --force</span>
+                <span class="text-success">user@portfolio</span>: <span class="text-primary">~/projects</span>$ <span class="text-white blinking-cursor">git push --force</span>
               </p>
-              <p class="terminal-line shadow mt-2 text-light">
-                Success! (just kidding, it's still broken)
-              </p>
+              <p class="terminal-line shadow mt-2 text-light"> Success! (just kidding, it's still broken) </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <div class="position-fixed top-0 w-100 z-3 nav-wrapper" [class.scrolled]="isScrolled">
     <app-navigation></app-navigation>
   </div>
 </header>
-
-
 <!-- About Section -->
 <section class="py-5">
   <div class="container">
@@ -74,44 +56,28 @@
       <div class="col-12 col-md-7">
         <div class="px-3">
           <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
-            <i class="bi bi-person me-1"></i> About Me
-          </span>
-          
-          <h2 class="display-5 fw-bold mb-3 text-light">
-            Building digital <br class="d-none d-sm-block">
-            <span class="gradient-text">experiences</span> that matter
+            <i class="bi bi-person me-1"></i> About Me </span>
+          <h2 class="display-5 fw-bold mb-3 text-light"> Engineering <br class="d-none d-sm-block">
+            <span class="gradient-text">solutions</span> that make an impact
           </h2>
-          
-          <p class="opacity-75 lead">
-            I'm a developer who turns ideas into functional, beautiful web applications.
-            Currently interning and sharpening my skills in Angular, TypeScript, and
-            modern web technologies.
-          </p>
-          
-          <p class="opacity-50">
-            When I'm not coding, I focus on learning new technologies, contributing to
-            personal projects, and staying current with modern development practices.
-          </p>
-          
+          <p class="opacity-75 lead"> Focused on building reliable backend systems, APIs, and database-driven solutions. Currently interning and sharpening my skills in C#, .NET, and database development, with a growing interest in frontend technologies such as Angular and TypeScript. </p>
+          <p class="opacity-50"> When I'm not coding, I focus on learning new technologies, contributing to personal projects, and staying current with modern development practices. </p>
           <!-- Stats -->
           <div class="d-flex gap-4 mt-4 text-light">
             <div>
-              <span class="d-block fw-bold fs-3 text-primary">1+</span>
-              <span class="text-light opacity-75">Year/s Coding</span>
+              <span class="d-block fw-bold fs-3 text-primary">Student</span>
+              <span class="text-light opacity-75">Academic Status</span>
             </div>
             <div>
               <span class="d-block fw-bold fs-3 text-primary">Intern</span>
               <span class="text-light opacity-75">Current Role</span>
             </div>
           </div>
-          
           <!-- CTA -->
-          <a routerLink="/about" class="btn-custom mt-4">
-            Read More <i class="fa-solid fa-arrow-right-long text-light ms-1"></i>
+          <a routerLink="/about" class="btn-custom mt-4"> Read More <i class="fa-solid fa-arrow-right-long text-light ms-1"></i>
           </a>
         </div>
       </div>
-
       <!-- Right - Info Card -->
       <div class="col-12 col-md-5 mt-5">
         <div class="about-card p-4 p-lg-5 rounded-4">
@@ -120,28 +86,29 @@
               <i class="bi bi-mortarboard fs-2 text-primary"></i>
               <div class="text-light">
                 <h6 class="fw-bold mb-0">Education</h6>
-                <small class="">Computer and System Science</small>
+                <small class="text-light opacity-75">Computer and System Science</small>
               </div>
             </div>
             <div class="d-flex align-items-center gap-3">
               <i class="bi bi-briefcase fs-2 text-primary"></i>
               <div class="text-light">
                 <h6 class="fw-bold mb-0">Experience</h6>
-                <small>FullStack Developer Internship</small>
+                <small class="text-light opacity-75">FullStack Developer Internship</small>
               </div>
             </div>
             <div class="d-flex align-items-center gap-3">
               <i class="bi bi-code-square fs-2 text-primary"></i>
               <div class="text-light">
                 <h6 class="fw-bold mb-0">Focus</h6>
-                <small>Backend and FullStack</small>
+                <small class="text-light opacity-75">Backend and FullStack</small>
               </div>
             </div>
             <div class="d-flex align-items-center gap-3">
               <i class="bi bi-calendar-check fs-2 text-primary"></i>
               <div class="text-light">
                 <h6 class="fw-bold mb-0">Availability</h6>
-                <small>Open to Junior Frontend / Full-Stack Roles</small>              </div>
+                <small class="text-light opacity-75">Open to Junior-Mid Roles</small>
+              </div>
             </div>
           </div>
         </div>
@@ -149,116 +116,87 @@
     </div>
   </div>
 </section>
-
 <!-- Projects Section -->
 <section class="py-5">
   <div class="container">
     <!-- Header -->
-    <div class="text-center mb-5">
-      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
-        <i class="bi bi-folder me-1"></i> Projects
-      </span>
-      <h2 class="display-5 fw-bold mb-3 text-light">Projects I've Built</h2>
-      <p class="text-light opacity-75">A selection of projects I'm proud of</p>
+    <div class="project-section">
+      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2  rounded-pill mb-3">
+        <i class="bi bi-folder"></i> Projects </span>
+      <h2 class="display-5 fw-bold text-light">Projects I've Built</h2>
+      <p class="text-light opacity-50">A selection of projects I'm proud of</p>
     </div>
 
-    <!-- Projects Grid -->
-    <div class="row g-4">
-      <div class="col-12 col-md-4">
-        <div class="project-card h-100">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Book Management">
-            <div class="project-overlay">
-              <a href="#" class="project-link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
-              <a href="#" class="project-link" target="_blank"><i class="bi bi-github"></i></a>
+    <div class="row mt-4">
+      <div class="col-12 col-md-12">
+        <div class="project-info">
+          <p class="text-light opacity-75 mb-4 fs-6 lead">
+            A mix of personal side projects and academic work where each one taught
+            me something new about architecture, tooling, or how to ship
+            software that actually works.
+          </p>
+        </div>
+        <div class="project-wrapper d-flex justify-content-between gap-2">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Book Management"
+                width="100" height="50">
+              <div class="project-overlay text-light">
+                <span class="fw-bold mb-2 text-light ">Book Management</span>
+                <div class="d-flex flex-wrap gap-2" translate="no">
+                  <span class="tech-tag">Angular</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">.NET</span>
+                  <span class="tech-tag">REST API</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="project-body text-light">
-            <h5 class="fw-bold mb-2">Book Management</h5>
-            <p class="small mb-3">
-              A full-stack CRUD application with a .NET/C# REST API backend and 
-              Angular frontend. Features JWT authentication, book catalog management, 
-              and a RESTful API designed with clean architecture and SOLID principles.
-            </p>
-            <div class="d-flex flex-wrap gap-2" translate="no">
-              <span class="tech-tag">Angular</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">.NET</span>
-              <span class="tech-tag">REST API</span>
-              <span class="tech-tag">JSON</span>
-              <span class="tech-tag">Bootstrap</span>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80" alt="Task Manager">
+              <div class="project-overlay">
+                <span class="fw-bold mb-2 text-light ">Task Manager</span>
+                <div class="d-flex flex-wrap gap-2" translate="no">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Database</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">React Native</span>
+                  <span class="tech-tag">REST API</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1676057060928-c717a8e96784?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hhdCUyMHN5c3RlbXxlbnwwfHwwfHx8MA%3D%3D"
+                alt="IRC Chat system">
+              <div class="project-overlay">
+                <span class="fw-bold mt-2 text-light ">IRC Chat System</span>
+                <div class="d-flex flex-wrap gap-2" translate="no">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">OOP</span>
+                  <span class="tech-tag">TCP</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4">
-        <div class="project-card h-100">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80" alt="Task Manager">
-            <div class="project-overlay">
-              <a href="#" class="project-link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
-              <a href="#" class="project-link" target="_blank"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-          <div class="project-body">
-            <h5 class="fw-bold mb-2 text-light">Task Manager</h5>
-            <p class="small mb-3">
-              A cross-platform personal productivity system built with a Java backend, 
-              React web client, and React Native mobile app. Organizes work into 
-              tasks that hold nested lists and notes for quick thoughts and reminders.
-            </p>
-            <div class="d-flex flex-wrap gap-2" translate="no">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Database</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">REST API</span>
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="col-12 col-md-4">
-        <div class="project-card h-100">
-          <div class="project-image">
-  <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80" alt="Bank Management">
-            <div class="project-overlay">
-              <a href="#" class="project-link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
-              <a href="#" class="project-link" target="_blank"><i class="bi bi-github"></i></a>
-            </div>
-          </div>
-          <div class="project-body">
-            <h5 class="fw-bold mb-2 text-light">Bank Management</h5>
-            <p class="small mb-3">
-              A desktop banking application built in Java using Swing for the GUI. 
-              Designed with pure object-oriented principles. Accounts, transactions, 
-              and customers modeled as independent classes. Supports deposits, 
-              withdrawals, transfers, and balance tracking with persistent data.
-            </p>
-            <div class="d-flex flex-wrap gap-2" translate="no">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Swing</span>
-              <span class="tech-tag">OOP</span>
-              <span class="tech-tag">File I/O</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
     <!-- View All Button -->
     <div class="text-center mt-5">
-      <a routerLink="/projects" class="btn-custom">
-        View All Projects <i class="fa-solid fa-arrow-right-long text-light"></i>
+      <a routerLink="/projects" class="btn-custom"> View All Projects <i class="fa-solid fa-arrow-right-long text-light"></i>
       </a>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
+
 <section class="py-5">
   <div class="container">
     <div class="cta-box p-5 rounded-4 text-center position-relative overflow-hidden">
