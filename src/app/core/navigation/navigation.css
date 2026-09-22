@@ -15,16 +15,10 @@
     cursor: pointer;
 }
 
-/* Transparent - Home page before scroll */
-.navbar-transparent {
-  background: transparent !important;
-  transition: background 0.3s ease;
-}
-
-
-/* Default dark for other pages */
-.bg-dark {
-  background-color: var(--color-gray-950) !important;
+@media (max-width: 420px) {
+  .collapse {
+    background-color: var(--color-gray-950);
+  }
 }
 
 /* Language Toggle Button */
