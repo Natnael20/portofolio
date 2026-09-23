@@ -11,6 +11,7 @@ export class Navigation implements OnInit {
   isHome = false;
   currentLang = 'en';
   showLangIntro = false;
+  private translationRetries = 0;
 
   constructor(private router: Router) {
     this.router.events.subscribe(() => {
@@ -48,6 +49,44 @@ export class Navigation implements OnInit {
 
     window.location.reload();
   }
+
+  private retriggerTranslation(): void {
+    // Check if a translation is currently active
+    const activeLang = this.getActiveTranslateLang();
+    if (!activeLang || activeLang === 'en') {
+      return; // No translation active, nothing to do
+    }
+
+    // Method 1: Re-dispatch a change event on the hidden Google dropdown
+    const combo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+    if (combo) {
+      combo.value = activeLang;
+      combo.dispatchEvent(new Event('change'));
+      return;
+    }
+
+    // Method 2: Fallback — reload the Google Translate script
+    this.retriesOrReload();
+  }
+
+  private getActiveTranslateLang(): string | null {
+    const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
+    return match ? match[1] : null;
+  }
+
+  private retriesOrReload(): void {
+    this.translationRetries++;
+
+    if (this.translationRetries > 5) {
+      // Give up after 5 tries to avoid infinite loops
+      this.translationRetries = 0;
+      return;
+    }
+
+    // Retry after a short delay (Google Translate may still be loading)
+    setTimeout(() => this.retriggerTranslation(), 500);
+  }
+
 
   dismissIntro(): void {
     this.showLangIntro = false;

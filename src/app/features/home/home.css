@@ -1,6 +1,7 @@
 /* Hero Section with Background */
 header {
   position: relative;
+  top: -35px;
   width: 100%;
   height: 130dvh;
   max-height: 750px;
