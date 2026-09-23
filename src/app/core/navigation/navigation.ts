@@ -39,26 +39,40 @@ export class Navigation implements OnInit, AfterViewInit, OnDestroy {
 }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      if (typeof translate === 'undefined') {
-        console.error('translate.js not loaded');
-        return;
-      }
+  setTimeout(() => {
+    if (typeof translate === 'undefined') {
+      console.error('translate.js not loaded');
+      return;
+    }
 
-      translate.ignore.class.push('tech-tag'); //tech tag will not will never translate
-      translate.ignore.class.push('project-titles')
+    // Ignore tech tags
+    translate.ignore.class.push('tech-tag');
+    translate.ignore.class.push('project-titles');
 
-      translate.language.setLocal('english');
 
+    // Set source language
+    translate.language.setLocal('english');
+
+    // 1. SWITCH TO THE SERVICE CHANNEL (Often faster for Swedish)
+    translate.service.use('translate.service'); 
+
+    // 2. Enable a LONGER cache to prevent re-translation on every visit
+    translate.cache = 1000 * 60 * 60 * 24; // Cache for 24 hours
+
+    // Hide default UI
+    if (translate.selectLanguageTag) {
       translate.selectLanguageTag.show = false;
+    }
 
-      translate.listener.start();
-
-      if (this.currentLang === 'sv') {
-        translate.changeLanguage('swedish');
-      }
-    }, 300);
-  }
+    // Start monitoring and translate
+    translate.listener.start();
+    
+    if (this.currentLang === 'sv') {
+      translate.changeLanguage('swedish');
+    }
+  }, 300);
+}
+  
 
   ngOnDestroy(): void {
     this.routerSub?.unsubscribe();
