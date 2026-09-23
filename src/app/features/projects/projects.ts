@@ -64,7 +64,7 @@ export class Projects {
     },
     {
       id: 5,
-      title: 'Stride (E-commerce Website)',
+      title: 'Stride',
       description: 'STRIDE is a footwear brand website showcasing and selling shoes across categories like running, sneakers, basketball, and casual.',
       category: 'frontend',
       tech: ['HTML5', 'CSS3', 'Bootstrap', 'Font Awesome', 'JavaScript'],
@@ -251,6 +251,31 @@ export class Projects {
     const normalizedCategory = category.trim().toLowerCase();
     return this.projects.filter(p => p.category.toLowerCase() === normalizedCategory).length;
   }
+
+  /* ================================
+   CATEGORY ROWS
+   ================================ */
+getProjectsByCategory(category: string): Project[] {
+  return this.projects.filter(p => p.category === category);
+}
+
+hasProjects(category: string): boolean {
+  return this.projects.some(p => p.category === category);
+}
+
+/* ================================
+   HORIZONTAL SLIDE
+   ================================ */
+scrollRow(category: string, direction: number): void {
+  const row = document.querySelector(`#row_${category}`) as HTMLElement;
+  if (!row) return;
+
+  const cardWidth = 340; // card width + gap
+  row.scrollBy({
+    left: direction * cardWidth,
+    behavior: 'smooth'
+  });
+}
 
   /* ================================
      PROJECT MODAL

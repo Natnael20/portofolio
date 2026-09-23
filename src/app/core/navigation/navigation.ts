@@ -45,7 +45,13 @@ export class Navigation implements OnInit, AfterViewInit, OnDestroy {
         return;
       }
 
+      translate.ignore.class.push('tech-tag'); //tech tag will not will never translate
+      translate.ignore.class.push('project-titles')
+
       translate.language.setLocal('english');
+
+      translate.selectLanguageTag.show = false;
+
       translate.listener.start();
 
       if (this.currentLang === 'sv') {
