@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common'; // ← CORRECT PACKAGE
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { FormsModule } from '@angular/forms';
-import { provideHttpClient } from '@angular/common/http'; // ← new import
+import { provideHttpClient, HttpClientModule } from '@angular/common/http'; // ← new import
 import { App } from './app';
 import { Navigation } from './core/navigation/navigation';
 import { Footer } from './core/footer/footer';
@@ -15,7 +15,13 @@ import { ShaderBackground } from './shared/shader-background/shader-background';
 
 @NgModule({
   declarations: [App, Navigation, Footer, Home, About, Projects, Contact, ShaderBackground],
-  imports: [BrowserModule, CommonModule, FormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient()],
   bootstrap: [App],
 })
