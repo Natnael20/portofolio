@@ -145,7 +145,7 @@ export class Projects {
     {
       id: 13,
       title: 'Parking Lot',
-      description: 'A Spring Boot application for employee management, built with Java and the Spring Boot framework. It provides backend functionality for handling employee records, likely including operations like adding, viewing, updating, and deleting employee data through a REST API.',
+      description: 'A Java console-based Parking Lot Management System that provides a simple, text-driven interface for handling parking operations such as registering vehicle entry, recording exits, allocating parking spots, and calculating fees.',
       category: 'Backend',
       tech: ['Java'],
       image: 'https://images.unsplash.com/photo-1495435229349-e86db7bfa013?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHBhcmtpbmd8ZW58MHx8MHx8fDA%3D',
